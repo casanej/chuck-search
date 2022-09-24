@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { RouteObject, useLoaderData, useParams } from 'react-router-dom';
-import { Pagination } from '../../components';
+import { Pagination, SearchBar } from '../../components';
 import { ChuckNorrisIO } from '../../services';
 import { ChuckNorrisResponse, ChuckNorrisResponsePaginated } from '../../services/ChuckNorrisIO/models';
+import { SearchPageStyle } from './index.style';
 
 export const SearchPage = () => {
     const [currenPage, setCurrentPage] = useState(0);
@@ -12,7 +13,8 @@ export const SearchPage = () => {
 
     if (searchJokes.data.total === 0) return <div>Not found jokes</div>
 
-    return <div>
+    return <SearchPageStyle>
+        <SearchBar />
         {
             searchJokes.data.result[currenPage].map(joke => {
                 return <div key={joke.id} style={{marginTop: 10}}>
@@ -25,7 +27,7 @@ export const SearchPage = () => {
         {
             searchJokes.data.totalPages > 1 && <Pagination totalPages={searchJokes.data.totalPages} onChange={setCurrentPage} />
         }
-    </div>
+    </SearchPageStyle>
 };
 
 export const searchPage: RouteObject = {

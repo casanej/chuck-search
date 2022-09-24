@@ -1,11 +1,13 @@
-import './App.css'
+import { AppStyled } from './app.style'
+import { GlobalStyle } from './assets/theme'
 import { PagesApp } from './pages'
 
 function App() {
 
-  return (
+  return <AppStyled>
+    <GlobalStyle />
     <PagesApp />
-  )
+  </AppStyled>
 }
 
 export default App

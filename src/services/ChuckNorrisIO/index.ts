@@ -47,6 +47,10 @@ export class ChuckNorrisIO {
         const jokesChunks = []
         const { result } = response.data;
 
+        result.forEach((joke) => {
+            joke.value = `${joke.value.substring(0, 100)}...`;
+        });
+
         while (result.length > 0) jokesChunks.push(result.splice(0, perPage));
 
         return {

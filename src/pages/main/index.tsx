@@ -1,29 +1,13 @@
-import { useCallback, useState } from 'react'
-import { RouteObject, useNavigate } from 'react-router-dom';
-import { ChuckNorrisIO } from '../../services';
+import { RouteObject } from 'react-router-dom';
+import { MainPageStyled } from './index.style';
+import chuckSearchLogo from '../../assets/images/chuck-search-logo.png';
+import { SearchBar } from '../../components';
 
-const chuckNorris = new ChuckNorrisIO();
-
-export const MainPage = () => {
-    const navigate = useNavigate();
-
-    const [query, setQuery] = useState('');
-
-    const handleOnSearch = useCallback(() => {
-        if (query) navigate(`/search/${query}`);         
-    }, [query])
-
-    const handleLuckySearch = useCallback(async () => {
-        const luckyJoke = await chuckNorris.getJokesBySearch(query);
-
-        if (luckyJoke.success) navigate(`/joke/${luckyJoke.data.result[0][0].id}`);
-    }, [query])
-
-    return <div>
-        <input value={query} onChange={(e) => setQuery(e.target.value)} />
-        <button onClick={handleOnSearch}>Procurar</button>
-        <button onClick={handleLuckySearch}>Estou com sorte</button>
-    </div>;
+export const MainPage = () => {         
+    return <MainPageStyled>
+        <img src={chuckSearchLogo} alt="Chuck Search Logo" width={260} />
+        <SearchBar showActionButton />
+    </MainPageStyled>;
 };
 
 export const mainPage: RouteObject = {
