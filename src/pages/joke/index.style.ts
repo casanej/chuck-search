@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const JokePageContent = styled.div`
     max-width: 600px;
-    min-height: 125px;
+    min-height: 155px;
     width: 100%;
     background-color: #868a56;
     border: 5px solid #575b28;
@@ -12,10 +12,6 @@ export const JokePageContent = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-
-    position: absolute;
-    top: 20px;
-    left: 0px;
     
     > div {
         max-width: 375px;
@@ -27,42 +23,56 @@ export const JokePageContent = styled.div`
 `;
 
 export const JokePageTalker = styled.div`
-    position: absolute;
-    top: 0px;
-    left: 41px;
-
     img {
         width: 140px;
     }
 `;
 
 export const JokePageName = styled.div`
-    position: absolute;
-    top: 175px;
-    left: 425px;
 `;
 
 export const JokePageWrapper = styled.div`
     position: relative;
-    width: 600px;
-    height: 220px;
     overflow: hidden;
+
+    @media (min-width: 601px) {
+        width: 600px;
+        height: 220px;
+
+        ${JokePageContent} {
+            position: absolute;
+            top: 20px;
+            left: 0px;
+        }
+
+        ${JokePageTalker} {
+            position: absolute;
+            top: 0px;
+            left: 41px;
+        }
+
+        ${JokePageName} {
+            position: absolute;
+            top: 180px;
+            left: 425px;
+        }   
+    }
 
     @media (min-width: 360px) and (max-width: 600px) {
         ${JokePageContent} {
             max-width: 340px;
-            top: 0px;
-            left: 130px;
+            margin-top: 20px;
         }
 
         ${JokePageTalker} {
-            top: 167px;
-            left: 150px;
+            margin-top: -17px;
+            margin-left 34px;
         }
 
         ${JokePageName} {
-            top: 190px;
-            left: 295px;
+            position: absolute;
+            top: 0;
+            left: 15px;
         }   
     }
 `;

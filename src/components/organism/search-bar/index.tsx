@@ -34,13 +34,13 @@ export const SearchBar: FC<Props> = (props) => {
         <InputText
             value={params.query}
             fullWidth
-            placeholder="Come on, it's just a joke"
+            placeholder="Come on, it's just a word"
             onChange={(value) => { setQuery(value) }}
             onKeyUp={handlePressEnter}
         />
 
         {props.showActionButton && <SearchActionButton>
-            <Button onClick={handleOnSearch}>Find</Button>
+            <Button onClick={handleOnSearch}>Find a Joke</Button>
             <Button onClick={handleLuckySearch}>I'm Lucky</Button>
         </SearchActionButton>
         }
