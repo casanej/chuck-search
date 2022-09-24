@@ -6,6 +6,7 @@ export const ButtonSStyled = styled.button`
     padding: 7px 0;
     border-radius: 50px;
     color: #fff;
+    cursor: pointer;
 
     min-width: 125px;
 `;

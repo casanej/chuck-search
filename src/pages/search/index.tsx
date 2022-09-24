@@ -14,13 +14,13 @@ export const SearchPage = () => {
 
     if (!searchJokes.success) return <SearchPageStyle alignItem='center'>
         <SearchBar />
-        <img src={chuckNorrisShy} alt="No results found" width={300} />
+        <img src={chuckNorrisShy} alt="No results found" />
         <h1>Error to get jokes</h1>
     </SearchPageStyle>
 
     if (searchJokes.data.total === 0) return <SearchPageStyle alignItem='center'>
         <SearchBar />
-        <img src={chuckNorrisAngry} alt="No results found" width={300} />
+        <img src={chuckNorrisAngry} alt="No results found" />
         <h1>No jokes for you</h1>
     </SearchPageStyle>
 

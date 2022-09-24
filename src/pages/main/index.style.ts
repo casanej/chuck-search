@@ -9,13 +9,22 @@ export const MainPageStyled = styled.div`
     gap: 20px;
     width: 100%;
 
-    img {
-        max-width: 420px;
+    > img {
+        transform: rotate(-10deg);
     }
 
-    @media (max-width: 460px) {
-        img {
-            max-width: 320px;
+    > div {
+        &:nth-child(2) {
+            line-height: 0.9;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #6b8da0;
         }
     }
+`;
+
+export const MainPageTitle = styled.div`
+    font-size: 42px;
+    font-weight: bolder;
+    font-family: "PixelMillennium", sans-serif;
 `;

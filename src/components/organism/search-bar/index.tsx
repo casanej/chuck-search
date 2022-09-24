@@ -37,6 +37,7 @@ export const SearchBar: FC<Props> = (props) => {
             placeholder="Come on, it's just a word"
             onChange={(value) => { setQuery(value) }}
             onKeyUp={handlePressEnter}
+            onSearch={() => handleOnSearch()}
         />
 
         {props.showActionButton && <SearchActionButton>

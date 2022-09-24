@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import PixeloidSans from '../fonts/PixeloidSans.ttf';
+import PixelMillennium from '../fonts/PixelMillennium.ttf';
 
 export const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -9,19 +10,25 @@ export const GlobalStyle = createGlobalStyle`
     font-style: normal;
   }
 
+  @font-face {
+    font-family: "PixelMillennium";
+    src: url(${PixelMillennium}) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+  }
+
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Pixeloid-Sans', sans-serif;
   }
 
   body {
     background-color: #FFFFFF;
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
-    font-family: 'Pixeloid-Sans', sans-serif;
     font-size: 12px;
   }
 

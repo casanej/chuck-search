@@ -7,8 +7,9 @@ export const NavBar: FC = () => {
     return <NavBarStyled>
         <NavBarItems>
             <div>
-                <div>ICONE</div>
                 <div>Chuck Search</div>
+                <div>|</div>
+                <div>If Chuck Norris approves, who are you to disagree.</div>
             </div>
             <NavBarItem>
                 <Link to='/'>Home</Link>
