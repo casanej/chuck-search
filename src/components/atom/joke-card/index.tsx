@@ -12,6 +12,6 @@ export const JokeCard:FC<Props> = (props) => {
         <JokeCardText>
             {props.jokeData.value}
         </JokeCardText>
-        <JokeSeeMore href={`/joke/${props.jokeData.id}`}>+</JokeSeeMore>
+        <JokeSeeMore to={`/joke/${props.jokeData.id}`}>+</JokeSeeMore>
     </JokesCardStyle>;
 };

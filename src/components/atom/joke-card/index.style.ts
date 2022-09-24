@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const JokesCardStyle = styled.div`
     background-color: #F4F4F4;
@@ -42,7 +43,7 @@ export const JokeCardText = styled.div`
     }
 `;
 
-export const JokeSeeMore = styled.a`
+export const JokeSeeMore = styled(Link)`
     width: 40px;
     color: #8D9B34;
     font-weight: bold;

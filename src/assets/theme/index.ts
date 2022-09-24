@@ -1,10 +1,20 @@
 import { createGlobalStyle } from "styled-components";
+import PixeloidSans from '../fonts/PixeloidSans.ttf';
 
 export const GlobalStyle = createGlobalStyle`
+  @font-face {
+    font-family: "Pixeloid-Sans";
+    src: url(${PixeloidSans}) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+  }
+
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Pixeloid-Sans', sans-serif;
+    font-size: 12px;
   }
 
   body {
