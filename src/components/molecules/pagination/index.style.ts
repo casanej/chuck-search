@@ -11,8 +11,8 @@ export const PaginationWrapper = styled.div`
 export const PaginationItem = styled.div<{ active?: boolean }>`
     background-color: #FFF;
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;

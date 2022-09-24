@@ -13,8 +13,6 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Pixeloid-Sans', sans-serif;
-    font-size: 12px;
   }
 
   body {
@@ -23,6 +21,8 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
+    font-family: 'Pixeloid-Sans', sans-serif;
+    font-size: 12px;
   }
 
   #root {

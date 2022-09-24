@@ -11,6 +11,6 @@ export const MainPage = () => {
 };
 
 export const mainPage: RouteObject = {
-    path: '/',
     element: <MainPage />,
+    index: true
 }

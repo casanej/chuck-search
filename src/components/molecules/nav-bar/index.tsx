@@ -1,22 +1,18 @@
-import React, { FC } from 'react'
-import { Container } from '../../atom';
-import { NavBarItems, NavBarStyled } from './index.syle';
+import { FC } from 'react'
+import { Link } from 'react-router-dom';
+import { NavBarItem, NavBarItems, NavBarStyled } from './index.syle';
 
-interface Props { }
-
-export const NavBar: FC<Props> = (props) => {
+export const NavBar: FC = () => {
 
     return <NavBarStyled>
-        <Container>
-            <NavBarItems>
-                <div>
-                    <div>ICONE</div>
-                    <div>Chuck Search</div>
-                </div>
-                <div>
-                    <div>Home</div>
-                </div>
-            </NavBarItems>
-        </Container>
+        <NavBarItems>
+            <div>
+                <div>ICONE</div>
+                <div>Chuck Search</div>
+            </div>
+            <NavBarItem>
+                <Link to='/'>Home</Link>
+            </NavBarItem>
+        </NavBarItems>
     </NavBarStyled>;
 };

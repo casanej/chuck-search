@@ -6,6 +6,7 @@ import { ChuckNorrisResponse, ChuckNorrisResponsePaginated } from '../../service
 import { SearchItems, SearchPageStyle } from './index.style';
 
 import chuckNorrisAngry from '../../assets/images/chuck-norris-angry.png';
+import chuckNorrisShy from '../../assets/images/chuck-norris-shy.png';
 
 export const SearchPage = () => {
     const [currenPage, setCurrentPage] = useState(0);
@@ -13,7 +14,7 @@ export const SearchPage = () => {
 
     if (!searchJokes.success) return <SearchPageStyle alignItem='center'>
         <SearchBar />
-        <img src={chuckNorrisAngry} alt="No results found" width={300} />
+        <img src={chuckNorrisShy} alt="No results found" width={300} />
         <h1>Error to get jokes</h1>
     </SearchPageStyle>
 
