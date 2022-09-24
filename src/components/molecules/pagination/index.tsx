@@ -1,5 +1,5 @@
 import { FC, useEffect, useMemo, useState } from 'react'
-import { PaginationWrapper } from './index.style';
+import { PaginationItem, PaginationWrapper } from './index.style';
 
 interface Props {
     totalPages: number;
@@ -12,21 +12,31 @@ export const Pagination: FC<Props> = (props) => {
     const mountPages = useMemo(() => {
         const pages = [];
 
-        for (let i = 1; i <= props.totalPages; i++) {
+        const maxPages = Math.min(props.totalPages, 7);
+        const startPage = Math.max(1, Math.min(currenPage - 3, props.totalPages - maxPages + 1));
+        const endPage = Math.min(props.totalPages, startPage + maxPages - 1);
+
+        for (let i = startPage; i <= endPage; i++) {
             pages.push(i);
         }
 
         return pages;
-    }, [props.totalPages]);
+    }, [props.totalPages, currenPage]);
 
     useEffect(() => {
         if (props.onChange) props.onChange(currenPage - 1);
     }, [currenPage]);
 
-    return <PaginationWrapper style={{ display: 'flex', gap: 10 }}>
+    return <PaginationWrapper       >
         {
             mountPages.map(page => {
-                return <div key={page} onClick={() => setCurrentPage(page)} style={{ color: currenPage === page ? 'red' : 'blue', cursor: 'pointer'}}>{page}</div>
+                return <PaginationItem
+                    key={page}
+                    onClick={() => setCurrentPage(page)}
+                    active={currenPage === page}
+                >
+                    {page}
+                </PaginationItem>
             })
         }
     </PaginationWrapper>;

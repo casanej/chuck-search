@@ -48,6 +48,7 @@ export const JokeSeeMore = styled.a`
     font-weight: bold;
     font-size: 25px;
     text-decoration: none;
+    text-align: center;
 
     &:hover {
         transform: scale(1.3);

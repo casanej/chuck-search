@@ -4,7 +4,7 @@ export const SearchPageStyle = styled.div<{ alignItem?: string }>`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
     align-items: ${({ alignItem }) => alignItem || "flex-start"};
 
     width: 100%;
