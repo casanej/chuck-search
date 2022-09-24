@@ -11,7 +11,7 @@ export const ContainerStyled = styled.div<{ fullHeight?: boolean; justifyContent
     ${props => props.justifyContent && `justify-content: ${props.justifyContent};`}
     ${props => props.alignItems && `align-items: ${props.alignItems};`}
 
-    @media (max-width: 460px) {
+    @media (max-width: 1200px) {
         padding: 0 20px;
     }
 `;

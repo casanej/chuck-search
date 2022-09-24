@@ -1,29 +1,37 @@
 import { useState } from 'react';
-import { RouteObject, useLoaderData, useParams } from 'react-router-dom';
-import { Pagination, SearchBar } from '../../components';
+import { RouteObject, useLoaderData } from 'react-router-dom';
+import { JokeCard, Pagination, SearchBar } from '../../components';
 import { ChuckNorrisIO } from '../../services';
 import { ChuckNorrisResponse, ChuckNorrisResponsePaginated } from '../../services/ChuckNorrisIO/models';
-import { SearchPageStyle } from './index.style';
+import { SearchItems, SearchPageStyle } from './index.style';
+
+import chuckNorrisAngry from '../../assets/images/chuck-norris-angry.png';
 
 export const SearchPage = () => {
     const [currenPage, setCurrentPage] = useState(0);
     const searchJokes = useLoaderData() as ChuckNorrisResponse<ChuckNorrisResponsePaginated>;
 
-    if (!searchJokes.success) return <div>Error to load the jokes. {searchJokes.error.message}</div>
+    if (!searchJokes.success) return <SearchPageStyle alignItem='center'>
+        <SearchBar />
+        <img src={chuckNorrisAngry} alt="No results found" width={300} />
+        <h1>Error to get jokes</h1>
+    </SearchPageStyle>
 
-    if (searchJokes.data.total === 0) return <div>Not found jokes</div>
+    if (searchJokes.data.total === 0) return <SearchPageStyle alignItem='center'>
+        <SearchBar />
+        <img src={chuckNorrisAngry} alt="No results found" width={300} />
+        <h1>No jokes for you</h1>
+    </SearchPageStyle>
 
     return <SearchPageStyle>
         <SearchBar />
-        {
-            searchJokes.data.result[currenPage].map(joke => {
-                return <div key={joke.id} style={{marginTop: 10}}>
-                    <div><a href={`/joke/${joke.id}`}>{joke.value}</a></div>
-                    <div>{joke.categories.join(', ')}</div>
-                </div>
-            })
-        }
-
+        <SearchItems>
+            {
+                searchJokes.data.result[currenPage].map(joke => {
+                    return <JokeCard key={joke.id} jokeData={joke} />
+                })
+            }
+        </SearchItems>  
         {
             searchJokes.data.totalPages > 1 && <Pagination totalPages={searchJokes.data.totalPages} onChange={setCurrentPage} />
         }

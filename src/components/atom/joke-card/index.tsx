@@ -1,8 +1,17 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
+import { ChuckNorrisJoke } from '../../../services/ChuckNorrisIO/models';
+import { JokeCardAction, JokeCardText, JokesCardStyle, JokeSeeMore } from './index.style';
 
-interface Props { }
+interface Props {
+    jokeData: ChuckNorrisJoke;
+}
 
 export const JokeCard:FC<Props> = (props) => {
-
-    return <div>JokeCard</div>;
+    return <JokesCardStyle>
+        <JokeCardAction></JokeCardAction>
+        <JokeCardText>
+            {props.jokeData.value}
+        </JokeCardText>
+        <JokeSeeMore href={`/joke/${props.jokeData.id}`}>+</JokeSeeMore>
+    </JokesCardStyle>;
 };
