@@ -18,7 +18,7 @@ export const JokePage = () => {
             <JokePageTalker>
                 <img src={arnoldSchwarzenegger} alt="Arnold Schwarzenegger" />
             </JokePageTalker>
-            {/* <JokePageName>Arnold Schwarzenegger</JokePageName> */}
+            <JokePageName>Arnold Schwarzenegger</JokePageName>
         </JokePageWrapper>
     </JokePageStyled>
 };
