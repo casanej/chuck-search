@@ -1,13 +1,5 @@
 import styled from "styled-components";
 
-export const JokePageStyled = styled.div`
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-`;
-
 export const JokePageContent = styled.div`
     max-width: 600px;
     min-height: 125px;
@@ -22,7 +14,7 @@ export const JokePageContent = styled.div`
     align-items: flex-end;
 
     position: absolute;
-    top: 47px;
+    top: 20px;
     left: 0px;
     
     > div {
@@ -53,10 +45,10 @@ export const JokePageName = styled.div`
 export const JokePageWrapper = styled.div`
     position: relative;
     width: 600px;
-    height: 400px;
+    height: 220px;
     overflow: hidden;
 
-    @media (min-width: 360px) and (max-height: 600px) {
+    @media (min-width: 360px) and (max-width: 600px) {
         ${JokePageContent} {
             max-width: 340px;
             top: 0px;
@@ -73,4 +65,12 @@ export const JokePageWrapper = styled.div`
             left: 295px;
         }   
     }
+`;
+
+export const JokePageStyled = styled.div`
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 `;
