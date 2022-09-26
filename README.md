@@ -92,6 +92,9 @@ The `dist` folder, includes all the files generated to run this application.
 
 ---
 
+# Credits
+Contain art or images from [Pixel Figures](https://pixelfigures.tumblr.com/post/74619508959/80s-action-icons-8-bit-pixel-art)
+
 # Contacts
 
 <p><span style="margin-right: 30px;"></span><a href="https://www.linkedin.com/in/rafael-casanje/"><img target="_blank" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" style="width: 10%;"></a><span style="margin-right: 30px;"></span><a href="https://github.com/casane"><img target="_blank" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" style="width: 10%;"></a><a href="mailto:rafael.casanje@gmail.com"><img target="_blank" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/google/google-original.svg" style="width: 10%;"></a></p>
