@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import { ChuckNorrisJoke } from '../../../services/ChuckNorrisIO/models';
-import { JokeCardAction, JokeCardText, JokesCardStyle, JokeSeeMore } from './index.style';
+import { JokeCardAction, JokeCardText, JokeSeeMore, JokesCardStyle } from './index.style';
 
 interface Props {
     jokeData: ChuckNorrisJoke;

@@ -14,13 +14,13 @@ export const SearchPage = () => {
 
     if (!searchJokes.success) return <SearchPageStyle alignItem='center'>
         <SearchBar />
-        <img src={chuckNorrisShy} alt="No results found" />
+        <img src={chuckNorrisShy} alt='No results found' />
         <h1>Error to get jokes</h1>
     </SearchPageStyle>
 
     if (searchJokes.data.total === 0) return <SearchPageStyle alignItem='center'>
         <SearchBar />
-        <img src={chuckNorrisAngry} alt="No results found" />
+        <img src={chuckNorrisAngry} alt='No results found' />
         <h1>No jokes for you</h1>
     </SearchPageStyle>
 
@@ -32,7 +32,7 @@ export const SearchPage = () => {
                     return <JokeCard key={joke.id} jokeData={joke} />
                 })
             }
-        </SearchItems>  
+        </SearchItems>
         {
             searchJokes.data.totalPages > 1 && <Pagination totalPages={searchJokes.data.totalPages} onChange={setCurrentPage} />
         }
@@ -42,10 +42,10 @@ export const SearchPage = () => {
 export const searchPage: RouteObject = {
     path: 'search/:query',
     element: <SearchPage />,
-    loader: async ({ params }) => {
+    loader: async({ params }) => {
         const chuckNorris = new ChuckNorrisIO();
 
-        if (params.query) return chuckNorris.getJokesBySearch(params.query);
+        if (params.query) return await chuckNorris.getJokesBySearch(params.query);
 
         return {
             success: false,

@@ -5,7 +5,7 @@ import { SearchBar } from '../../components';
 
 export const MainPage = () => {
     return <MainPageStyled>
-        <img src={chuckSearchLogo} alt="Chuck Search Logo" width={70} />
+        <img src={chuckSearchLogo} alt='Chuck Search Logo' width={70} />
         <div>
             <MainPageTitle>CHUCKSEARCH</MainPageTitle>
             <div>He definitely wouldn't need it</div>

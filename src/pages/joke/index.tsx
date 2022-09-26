@@ -16,7 +16,7 @@ export const JokePage = () => {
                 <div>{jokeResponse.data.value}</div>
             </JokePageContent>
             <JokePageTalker>
-                <img src={arnoldSchwarzenegger} alt="Arnold Schwarzenegger" />
+                <img src={arnoldSchwarzenegger} alt='Arnold Schwarzenegger' />
             </JokePageTalker>
             <JokePageName>Arnold Schwarzenegger</JokePageName>
         </JokePageWrapper>
@@ -26,10 +26,10 @@ export const JokePage = () => {
 export const jokePage: RouteObject = {
     path: 'joke/:id',
     element: <JokePage />,
-    loader: async ({ params }) => {
+    loader: async({ params }) => {
         const chuckNorris = new ChuckNorrisIO();
 
-        if (params.id) return chuckNorris.getJokeById(params.id);
+        if (params.id) return await chuckNorris.getJokeById(params.id);
 
         return {
             success: false,

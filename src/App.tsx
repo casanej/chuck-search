@@ -4,10 +4,10 @@ import { PagesApp } from './pages'
 
 function App() {
 
-  return <AppStyled>
-    <GlobalStyle />
-    <PagesApp />
-  </AppStyled>
+    return <AppStyled>
+        <GlobalStyle />
+        <PagesApp />
+    </AppStyled>
 }
 
 export default App

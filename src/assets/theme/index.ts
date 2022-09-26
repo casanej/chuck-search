@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 import PixeloidSans from '../fonts/PixeloidSans.ttf';
 import PixelMillennium from '../fonts/PixelMillennium.ttf';
 

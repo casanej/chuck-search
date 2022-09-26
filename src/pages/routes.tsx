@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { createBrowserRouter, Outlet } from 'react-router-dom';
+import { Outlet, createBrowserRouter } from 'react-router-dom';
 import { Container, NavBar } from '../components';
 import { jokePage } from './joke';
 import { mainPage } from './main';

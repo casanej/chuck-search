@@ -1,11 +1,11 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const SearchPageStyle = styled.div<{ alignItem?: string }>`
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 40px;
-    align-items: ${({ alignItem }) => alignItem || "flex-start"};
+    align-items: ${({ alignItem }) => alignItem || 'flex-start'};
 
     width: 100%;
     max-width: 600px;

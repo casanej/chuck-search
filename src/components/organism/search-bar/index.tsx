@@ -20,7 +20,7 @@ export const SearchBar: FC<Props> = (props) => {
         if (query) navigate(`/search/${query}`);
     }, [query])
 
-    const handleLuckySearch = useCallback(async () => {
+    const handleLuckySearch = useCallback(async() => {
         const luckyJoke = await chuckNorris.getJokesBySearch(query);
 
         if (luckyJoke.success) navigate(`/joke/${luckyJoke.data.result[0][0].id}`);

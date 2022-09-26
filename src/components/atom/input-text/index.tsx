@@ -15,7 +15,7 @@ interface Props {
 export const InputText:FC<Props> = (props) => {
     const [value, setValue] = useState('')
 
-    useEffect(() => {      
+    useEffect(() => {
         if (props.onChange) props.onChange(value, 'input-text');
     }, [value])
 

@@ -1,6 +1,6 @@
-import { AxiosInstance } from "axios";
-import { apiCN } from "../../config";
-import { ChuckNorrisJoke, ChuckNorrisResponse, ChuckNorrisResponsePaginated, ChuckNorrisSearch } from "./models";
+import { AxiosInstance } from 'axios';
+import { apiCN } from '../../config';
+import { ChuckNorrisJoke, ChuckNorrisResponse, ChuckNorrisResponsePaginated, ChuckNorrisSearch } from './models';
 
 export class ChuckNorrisIO {
     private instance: AxiosInstance = apiCN;

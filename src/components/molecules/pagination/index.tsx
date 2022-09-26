@@ -27,7 +27,7 @@ export const Pagination: FC<Props> = (props) => {
         if (props.onChange) props.onChange(currenPage - 1);
     }, [currenPage]);
 
-    return <PaginationWrapper       >
+    return <PaginationWrapper >
         {
             mountPages.map(page => {
                 return <PaginationItem

@@ -9,7 +9,7 @@ export const NotFoundPage: FC = () => {
 
     return <Container alignItems='center' justifyContent='center'>
         <NotFoundStyled>
-            <img src={chuckNorrisAngry} alt="No results found" width={300} />
+            <img src={chuckNorrisAngry} alt='No results found' width={300} />
             <h1>Got lost? Go back to where you came from!</h1>
         </NotFoundStyled>
     </Container>;
